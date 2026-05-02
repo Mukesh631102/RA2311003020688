@@ -64,7 +64,4 @@ Notifications are triaged based on a multi-tier weighted system:
 2. Open [http://localhost:3000](http://localhost:3000) in your browser.
 3. Authenticate using your Evaluation Service credentials to access the live telemetry data.
 
----
-
-## License
-MIT - Part of the RA2311003020688 Technical Assessment.
+-
