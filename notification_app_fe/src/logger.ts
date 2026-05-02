@@ -50,9 +50,9 @@ async function refreshToken(): Promise<string> {
   }
 
   const response = await http.post(AUTH_PATH, {
-    email:        authCredentials.email.toLowerCase(),
-    name:         authCredentials.name.toLowerCase(),
-    rollNo:       authCredentials.rollNo.toLowerCase(),
+    email:        authCredentials.email,
+    name:         authCredentials.name,
+    rollNo:       authCredentials.rollNo,
     accessCode:   authCredentials.accessCode,
     clientID:     authCredentials.clientID,
     clientSecret: authCredentials.clientSecret,
