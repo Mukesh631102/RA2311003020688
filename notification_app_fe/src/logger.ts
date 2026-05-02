@@ -49,16 +49,27 @@ async function refreshToken(): Promise<string> {
     throw new Error("Auth credentials not configured. Call setCredentials() first.");
   }
 
-  const response = await http.post(AUTH_PATH, {
-    email:        authCredentials.email,
-    name:         authCredentials.name,
-    rollNo:       authCredentials.rollNo,
-    accessCode:   authCredentials.accessCode,
-    clientID:     authCredentials.clientID,
-    clientSecret: authCredentials.clientSecret,
+  const response = await fetch(AUTH_PATH, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      email:        authCredentials.email,
+      name:         authCredentials.name,
+      rollNo:       authCredentials.rollNo,
+      accessCode:   authCredentials.accessCode,
+      clientID:     authCredentials.clientID,
+      clientSecret: authCredentials.clientSecret,
+    }),
   });
 
-  const { access_token, expires_in } = response.data;
+  if (!response.ok) {
+    throw new Error(`Auth Failed: ${response.status}`);
+  }
+
+  const data = await response.json();
+  const { access_token, expires_in } = data;
   accessToken = access_token;
   tokenExpiresAt = expires_in; // Unix timestamp
   return access_token;
