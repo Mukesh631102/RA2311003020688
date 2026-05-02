@@ -26,12 +26,12 @@ const App: React.FC = () => {
   const [authenticated, setAuthenticated] = useState(false);
   const [authLoading, setAuthLoading] = useState(false);
   const [authError, setAuthError] = useState<string | null>(null);
-  const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
-  const [rollNo, setRollNo] = useState('');
-  const [accessCode, setAccessCode] = useState('');
-  const [clientID, setClientID] = useState('');
-  const [clientSecret, setClientSecret] = useState('');
+  const [email, setEmail] = useState('ramkrishna@abc.edu');
+  const [name, setName] = useState('ram krishna');
+  const [rollNo, setRollNo] = useState('aa1bb');
+  const [accessCode, setAccessCode] = useState('xgAsNC');
+  const [clientID, setClientID] = useState('d9cbb699-6a27-44a5-8d59-8b1befa816da');
+  const [clientSecret, setClientSecret] = useState('tVJaaaRBSeXcRXeM');
 
   // Notification state
   const [notifications, setNotifications] = useState<NotificationItem[]>([]);
