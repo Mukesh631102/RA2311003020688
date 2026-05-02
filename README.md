@@ -1,9 +1,10 @@
 # Campus Notification Platform - Full Stack Submission
 
 ## Candidate Information
-- **Name:** Ram Krishna
+- **Name:** Mukesh P 
 - **Registration Number:** RA2311003020688
-- **Email:** ramkrishna@abc.edu
+- **Email:** mp3955@srmist.edu.in
+- 
 
 ---
 
